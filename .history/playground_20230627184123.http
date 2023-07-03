@@ -1,0 +1,12 @@
+POST https://saa-waardemeter.betty.app/api/runtime/9916144247b641a890c35c598e5a30e6
+Content-Type: application/json
+X-Request-Type: GraphQL
+
+{
+    allVragenlijst {
+        results {
+            id
+            vraag
+        }
+    }
+}

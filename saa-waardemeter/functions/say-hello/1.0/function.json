@@ -1,0 +1,42 @@
+{
+  "label": "Create Options By Using JSON",
+  "description": "This action is used to create a record based on JSON",
+  "category": "Misc",
+  "icon": {
+    "name": "NewActionIcon",
+    "color": "Teal"
+  },
+  "options": [
+    {
+      "meta": {
+        "type": "Text"
+      },
+      "name": "jsonText",
+      "label": "JSON Text",
+      "info": "JSON is going to be used to create a record",
+      "advanced": false,
+      "configuration": {
+        "placeholder": "Betty Blocks"
+      }
+    },
+    {
+      "name": "record",
+      "label": "Record",
+      "meta": {
+        "type": "Record"
+      }
+    },
+    {
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "Text"
+        }
+      },
+      "name": "greet",
+      "label": "As",
+      "info": "The resulting greet to the world."
+    }
+  ],
+  "yields": "NONE"
+}

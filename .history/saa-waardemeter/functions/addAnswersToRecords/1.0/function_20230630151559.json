@@ -1,0 +1,42 @@
+{
+  "description": "Description",
+  "label": "Add Answers To Records",
+  "category": "Misc",
+  "icon": {
+    "name": "ActionsIcon",
+    "color": "Orange"
+  },
+  "options": [{
+    "meta": {
+      "type": "Text"
+    },
+    "name": "arrayText",
+    "label": "Array Text",
+    "info": "Array is going to be used to create several answer records",
+    "advanced": false,
+    "configuration": {
+      "placeholder": "Betty Blocks"
+    }
+  },
+  {
+    "name": "record",
+    "label": "Record",
+    "meta": {
+      "type": "Record"
+    }
+  },
+  {
+    "meta": {
+      "type": "Output",
+      "output": {
+        "type": "Text"
+      }
+    },
+    "name": "greet",
+    "label": "As",
+    "info": "The resulting greet to the world."
+  }
+
+],
+  "yields": "NONE"
+}
