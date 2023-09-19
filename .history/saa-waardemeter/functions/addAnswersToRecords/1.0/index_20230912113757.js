@@ -6,11 +6,13 @@ const addAnswersToRecords = async ({ record, arrayText}) => {
             }
         }
     `,
-    stringToArray = JSON.stringify(arrayText),
-    convertToJson = JSON.parse(stringToArray);
+    convertToJson = JSON.parse(arrayText);
     convertToJson.forEach(async e => {
         if (Object.keys(e).length != 0){
-            const {data, errors} = await gql (mutation, { input: {vraag: e.Vraag, antwoord: e.Antwoord, gebruiker: {id: record.data.id}}})
+            if(e.Antwoord == "true"){
+                e.Antwoord = "Ja"
+            }
+            const {data, errors} = await gql (mutation, { input: {vraag: e.Vraag, antwoord: e.Antwoord, is_nummer: e.isNummer, gebruiker: {id: record.data.id}}})
         }
     });
 }
